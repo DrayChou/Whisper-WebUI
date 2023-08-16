@@ -150,9 +150,9 @@ class App:
                                          outputs=None)
 
         if self.args.share:
-            self.app.queue(api_open=False).launch(share=True)
+            self.app.queue(api_open=False).launch(server_name="0.0.0.0",server_port=8081,share=True)
         else:
-            self.app.queue(api_open=False).launch()
+            self.app.queue(api_open=False).launch(server_name="0.0.0.0",server_port=8081)
 
 
 # Create the parser
